@@ -1,26 +1,19 @@
-package com.main;
-import com.school.School;
-import com.student.Student;
+package com.main1;
+import com.manufacture.Manufacturer;
+import com.product.Product;
 public class Main {
 	public static void main(String[] args) {
-	School school =School.getSchoolObject("omega school","hyd","improve student knowldge");
-Student student=Student.getStudentObject("Rakesh", "A", school, 95);
-	if(school==null && student==null) {
-		System.out.println("Enter all the details properly");
+		Manufacturer mf = Manufacturer.getManufacturerObject("Rakesh", "Hyd", "12345678");
+		Product pd = Product.getProductObject("Laptop", "Electronic", mf, 1000000.0);
+		if(mf == null || pd == null)
+		{
+			System.out.println("Invalid Message");
+		}
+		System.out.println(pd);
+		System.out.println(mf);
+		
+
 	}
-	else {
-		System.out.println("School details ");
-		System.out.println(school);
-		System.out.println("Student details");
-		System.out.println(student);
-	}
+
 }
 
-
-	
-	
-
-
-
-
-}
